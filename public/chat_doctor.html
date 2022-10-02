@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style2.css" />
+    <link rel="stylesheet" href="css/style3.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Ephesis&family=Indie+Flower&family=Oswald:wght@200&family=Stick+No+Bills:wght@200&display=swap" rel="stylesheet">
+    <title>Health First Chat</title>
+</head>
+
+<body>
+    <div class="project-title-header">
+        <h2>
+            <a href="index.html" class="project-name-a">Health First . com</a>
+        </h2>
+    </div>
+
+    <div class="chat-container">
+        <header class="chat-header">
+            <h1><i class="fas fa-smile"></i> Doctor Chat First</h1>
+            <a id="leave-btn" class="btn">Leave Room</a>
+        </header>
+        <main class="chat-main">
+            <div class="chat-sidebar">
+                <h3><i class="fas fa-comments"></i> Appointment Number:</h3>
+                <h2 id="room-name"></h2>
+                <h3><i class="fas fa-users"></i> Users</h3>
+                <ul id="users"></ul>
+            </div>
+            <div class="chat-messages"></div>
+        </main>
+        <div class="chat-form-container">
+            <form id="chat-form">
+                <input id="msg" type="text" placeholder="Enter Message" required autocomplete="off" />
+                <button class="btn"><i class="fas fa-paper-plane"></i> Send</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="app">
+        <div class="screen join-screen active">
+            <div class="form">
+                <h4>Wait for patient to connect and send files securely</h4>
+                <div class="form-input">
+                    <label>Join ID</label>
+                    <input type="text" id="join-id">
+                </div>
+                <div class="form-input">
+                    <button id="receiver-start-con-btn">Connect</button>
+                </div>
+            </div>
+        </div>
+        <div class="screen fs-screen">
+            <div class="files-list">
+                <div class="title">Shared files</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.2/qs.min.js " integrity="sha256-TDxXjkAUay70ae/QJBEpGKkpVslXaHHayklIVglFRT4=" crossorigin=" anonymous "></script>
+    <script src="socket.io/socket.io.js "></script>
+    <script type="text/javascript " src="https://cdnjs.cloudflare.com/ajax/libs/downloadjs/1.4.1/download.min.js "></script>
+    <script src="js/main.js "></script>
+    <script type="text/javascript " src="js/receiver.js "></script>
+</body>
+
+</html>
